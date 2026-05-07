@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+
+
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -22,16 +24,15 @@ export default function Hero() {
       <div className="absolute top-20 left-4 sm:left-10 w-48 sm:h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-4 sm:right-10 w-64 sm:w-95 h-64 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-      <div>
+      <div className="relative max-w-3xl text-center bottom-45">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white py-5">Professional podcast sound at your fingertips</h1>
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-white">My Landing Page</h1>
-          <div className="bg-gradient-to-r from-gray900/20 to gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden">
-          
-            {/* HEADER */}
-            <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8"> 
-              
-            </div>
-          </div>
+          <p>Automatically enhance your audio quality with our cutting-edge technology. We fix your audio so that you can focus on content.</p>
+        </div>
+        <div className="bg-gradient-to-r from-gray900/20 to gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden">
+          <button className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors mt-6">
+            Get Started
+          </button>
         </div>
       </div>
     </section>
