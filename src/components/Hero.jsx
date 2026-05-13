@@ -30,7 +30,14 @@ export default function Hero() {
           <p>Automatically enhance your audio quality with our cutting-edge technology. We fix your audio so that you can focus on content.</p>
         </div>
         <div className="bg-gradient-to-r from-gray900/20 to gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden">
-          <button className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors mt-6">
+          <button
+            onClick={() =>
+              window.dispatchEvent(
+                new CustomEvent('open-login', { detail: { mode: 'signup' } })
+              )
+            }
+            className="cursor-pointer px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors mt-6"
+          >
             Get Started
           </button>
         </div>
